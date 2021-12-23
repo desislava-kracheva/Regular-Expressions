@@ -1,10 +1,16 @@
-function solveForSecondTime([text]){
+function solveForSecondTime(str){
 
-    let pattern = /\b[A-Z][a-z]+ [A-Z][a-z]+\b/g
 
-    let matches = text.match(pattern);
-    console.log(matches);
+    let validNames = [];
+    let pattern = /(\b[A-Z][a-z]+ [A-Z][a-z]+\b)/g;
 
+    let validName;
+    while (validName = pattern.exec(str)) {
+        validNames.push(validName[0]);
+    }
+    console.log(validNames.join(' '));
 }
+
+
 
 solveForSecondTime('ivan ivanov, Ivan ivanov, ivan Ivanov, IVan Ivanov, Ivan IvAnov, Ivan	Ivanov')

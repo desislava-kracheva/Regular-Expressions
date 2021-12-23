@@ -6,7 +6,7 @@ let validNames = [];
 let validName = null;
 while((validName = pattern.exec(names)) !== null) {
 
-    validNames .push(validName[0]);
+    validNames.push(validName[0]);
 
 }
 console.log(validNames.join(' '));
